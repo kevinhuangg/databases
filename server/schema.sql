@@ -1,18 +1,19 @@
 
-DROP DATABASE chat;
 CREATE DATABASE chat;
 
 USE chat;
 
 CREATE TABLE users ( 
   id int auto_increment,
-  username varchar(20),
+  username varchar(20) unique,
   PRIMARY KEY (id)
+
+
 );
 
 CREATE TABLE rooms (
   id int auto_increment,
-  room_name varchar(20),
+  room_name varchar(20) unique,
   PRIMARY KEY (id)
 );
 

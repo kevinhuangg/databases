@@ -6,19 +6,15 @@ module.exports = {
 
       models.messages.get(req, res);
     }, // a function which handles a get request for all messages
-    post: function (req, res) {} // a function which handles posting a message to the database
+    post: function (req, res) { // a function which handles posting a message to the database
+      models.messages.post(req, res);
+    }
   },
 
   users: {
     // Ditto as above
     get: function (req, res) {},
     post: function (req, res) {
-      // console.log(req.body);
-      // req.on('error', function(err) {
-      //   console.log('err', err);
-      // }).on('data', function(chunk) {
-      //   console.log('data', chunk);
-      // });
       models.users.post(req, res);
     }
   }
